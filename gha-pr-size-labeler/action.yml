@@ -1,0 +1,31 @@
+name: 'PR Size Labeler'
+description: 'Automatically label pull requests based on lines changed (XS/S/M/L/XL)'
+author: 'Lobster Dev'
+branding:
+  icon: 'tag'
+  color: 'green'
+
+inputs:
+  github-token:
+    description: 'GitHub token for API access'
+    required: true
+  xs-max:
+    description: 'Max lines for XS label'
+    required: false
+    default: '10'
+  s-max:
+    description: 'Max lines for S label'
+    required: false
+    default: '50'
+  m-max:
+    description: 'Max lines for M label'
+    required: false
+    default: '200'
+  l-max:
+    description: 'Max lines for L label'
+    required: false
+    default: '500'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'

@@ -1,0 +1,19 @@
+{"categories":[
+  {"name":"OSS赞助","items":[
+    {"name":"GitHub Sponsors","desc":"在GitHub上启用Sponsors按钮接受赞助","action":"Profile -> Sponsors -> 启用 -> 设置tiers","earning":"$100-5000+/月","difficulty":"低","time":"1-3个月"},
+    {"name":"Open Collective","desc":"开源项目财务管理平台","action":"注册 -> 关联仓库 -> 发布","earning":"不定","difficulty":"低","time":"1-2个月"},
+    {"name":"Buy Me a Coffee","desc":"简单接受打赏","action":"注册页面 -> 添加到README","earning":"$0-200/月","difficulty":"极低","time":"即时"}
+  ]},
+  {"name":"VSCode插件","items":[
+    {"name":"开发VSCode插件","desc":"开发实用扩展赚取收入","action":"Yeoman脚手架 -> 开发 -> 发布","earning":"$100-3000/月","difficulty":"中","time":"1-4周"},
+    {"name":"付费Pro功能","desc":"基础免费+Pro付费","action":"免费功能 -> 高级功能付费","earning":"$500-5000/月","difficulty":"中-高","time":"2-8周"}
+  ]},
+  {"name":"代码维护外包","items":[
+    {"name":"GitHub仓库维护","desc":"帮小团队维护开源项目","action":"Upwork/Fiverr发帖","earning":"$50-200/仓库/月","difficulty":"中","time":"2-4周"},
+    {"name":"Legacy代码重构","desc":"帮企业重构老旧代码","action":"展示案例 -> 接单","earning":"$100-500/项目","difficulty":"中-高","time":"1-3个月"}
+  ]},
+  {"name":"技术产品化","items":[
+    {"name":"卖CLI工具/脚本","desc":"开发小工具在Gumroad售卖","action":"发现痛点 -> 开发 -> 售卖","earning":"$20-2000+/月","difficulty":"中","time":"1-8周"},
+    {"name":"GitHub Action","desc":"发布Actions到Marketplace","action":"开发Action -> 发布 -> 推广","earning":"间接变现","difficulty":"低-中","time":"1-2周"}
+  ]}
+]}

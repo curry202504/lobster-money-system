@@ -1,0 +1,20 @@
+[
+  {"name":"Abstract L2","site":"portal.abs.xyz/rewards","type":"交互XP","status":"active","note":"每周任务赚XP积分+徽章"},
+  {"name":"PiP World","site":"mm.pip.world","type":"游戏化交易","status":"active","note":"注册领$10万模拟金，绑定钱包"},
+  {"name":"Katana","site":"app.katana.network","type":"存款挖矿","status":"active","note":"存USDC/USDT赚KAT代币激励"},
+  {"name":"Base","site":"base.org","type":"生态交互","status":"active","note":"Coinbase L2，交互生态项目获空投资格"},
+  {"name":"Backpack","site":"backpack.exchange","type":"交易积分","status":"active","note":"需KYC，交易赚积分"},
+  {"name":"Extended","site":"app.extended.exchange","type":"Perp交易","status":"active","note":"Season1积分计划，交易/LP赚积分"},
+  {"name":"Myriad","site":"myriad.markets","type":"预测市场","status":"active","note":"预测下注+每日签到免费赚积分"},
+  {"name":"ETHGas","site":"ethgas.com","type":"Gas返还","status":"active","note":"绑定X账号+钱包，生成Gas报告"},
+  {"name":"Glider","site":"glider.fi","type":"AI投资","status":"active","note":"a16z投资，存钱赚积分"},
+  {"name":"Perena","site":"app.perena.org","type":"DeFi","status":"active","note":"Solana稳定币协议，铸造USD*赚积分+APY"},
+  {"name":"PrismaX","site":"app.prismax.ai","type":"机器人","status":"active","note":"a16z投资，每日登录+聊天赚积分"},
+  {"name":"Fairblock","site":"discord.gg/fairblock","type":"隐私协议","status":"community","note":"Discord活跃获角色"},
+  {"name":"Euphoria","site":"euphoria.finance","type":"衍生品","status":"waitlist","note":"megaETH生态，排队中"},
+  {"name":"Melee","site":"—","type":"预测市场","status":"waitlist","note":"需Discord蹲白名单"},
+  {"name":"oshi","site":"gate2.oshi.co","type":"粉丝互动","status":"active","note":"动漫Web3，X账号登录"},
+  {"name":"KAST","site":"kast.com","type":"U卡支付","status":"active","note":"新银行+稳定币信用卡"},
+  {"name":"Ethos","site":"app.ethos.network","type":"链上声誉","status":"waitlist","note":"邀请制，需有人邀请"},
+  {"name":"Exponent","site":"exponent.finance","type":"Solana DeFi","status":"active","note":"存款赚积分"}
+]

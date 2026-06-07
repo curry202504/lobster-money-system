@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 300px; padding: 16px; font-family: -apple-system, 'PingFang SC', sans-serif; background: #0f0f1a; color: #e2e8f0; }
+    h1 { font-size: 18px; display: flex; align-items: center; gap: 8px; margin: 0 0 12px; }
+    h1 span { color: #00d4aa; }
+    .desc { font-size: 13px; color: #94a3b8; margin-bottom: 16px; }
+    .feature { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 13px; border-bottom: 1px solid #2a2a4a; }
+    .feature:last-child { border-bottom: none; }
+    .check { color: #00d4aa; font-weight: bold; }
+    .status { margin-top: 16px; padding: 10px; background: #1a1a2e; border-radius: 8px; text-align: center; font-size: 13px; border: 1px solid #2a2a4a; }
+    .status .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #00d4aa; margin-right: 6px; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+  </style>
+</head>
+<body>
+  <h1>🦞 <span>LinkClean</span></h1>
+  <div class="desc">复制链接时自动净化，移除追踪参数</div>
+  <div class="feature"><span class="check">✓</span> 自动移除 utm_source/medium/campaign</div>
+  <div class="feature"><span class="check">✓</span> 自动移除 fbclid / gclid</div>
+  <div class="feature"><span class="check">✓</span> 自动移除 msclkid / twclid</div>
+  <div class="feature"><span class="check">✓</span> 右键菜单 → "复制干净链接"</div>
+  <div class="feature"><span class="check">✓</span> 隐私保护，不上传任何数据</div>
+  <div class="status"><span class="dot"></span> 运行中 · 已拦截 30+ 追踪参数</div>
+</body>
+</html>

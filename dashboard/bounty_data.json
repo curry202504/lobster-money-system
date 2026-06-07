@@ -1,0 +1,10 @@
+[
+  {"name":"Gitcoin","url":"https://gitcoin.co/","type":"Web3/开源","notes":"最成熟的bounty平台，专注于Web3开源项目","tips":["关注Easy/Medium难度的任务入门","看预算合理的feature/bug任务","JavaScript/Python/文档类任务多"]},
+  {"name":"Dework","url":"https://dework.xyz/","type":"DAO任务","notes":"DAO治理任务，适合熟悉Web3的人","tips":["很多DAO发布赏金任务","Design/Marketing/Dev都有","重点关注新DAO"]},
+  {"name":"Algora","url":"https://algora.io/","type":"开源赏金","notes":"GitHub集成良好，适合开发者","tips":["按语言筛选bounty","关注活跃仓库","小任务练手"]},
+  {"name":"OnlyDust","url":"https://app.onlydust.com/","type":"StarkNet生态","notes":"StarkNet生态bounty平台","tips":["Cairo语言需要学习","StarkNet生态活跃","赏金丰厚"]},
+  {"name":"BountyHub","url":"https://bountyhub.dev/","type":"通用开发者","notes":"通用开发者bounty平台","tips":["多看新发布的任务","响应要快","竞争较大"]},
+  {"name":"闲鱼/淘宝","url":"https://2.taobao.com/","type":"国内接单","notes":"国内最大的二手/服务交易平台","tips":["Python爬虫脚本需求多","网站修改/小程序","价格偏低但门槛低"]},
+  {"name":"猪八戒/一品威客","url":"https://www.zbj.com/","type":"国内众包","notes":"国内传统众包平台","tips":["竞标模式","IT类项目很多","价格区间大"]},
+  {"name":"Upwork","url":"https://www.upwork.com/","type":"国际自由职业","notes":"全球最大自由职业平台","tips":["建立profile很重要","从小项目起步","长期客户价值高"]}
+]

@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "skills": {
+    "windows-screenshot": {
+      "version": "1.0.3",
+      "installedAt": 1777565234611
+    },
+    "web-screenshot": {
+      "version": "1.1.3",
+      "installedAt": 1777566738191
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1778615677794
+    },
+    "skill-vetter": {
+      "version": "1.0.0",
+      "installedAt": 1778615677851
+    },
+    "multi-search-engine": {
+      "version": "2.1.3",
+      "installedAt": 1778615678605
+    },
+    "ontology": {
+      "version": "1.0.4",
+      "installedAt": 1778741168087
+    },
+    "nano-banana-pro": {
+      "version": "1.0.1",
+      "installedAt": 1778741178417
+    },
+    "humanizer": {
+      "version": "1.0.0",
+      "installedAt": 1778741179604
+    },
+    "baidu-web-search": {
+      "version": "2.1.0",
+      "installedAt": 1778741191128
+    },
+    "gbrain-multi-agent-search": {
+      "version": "1.0.0",
+      "installedAt": 1779356443798
+    },
+    "gstack-openclaw": {
+      "version": "2.5.10",
+      "installedAt": 1779356445460
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "title": "L1: Add unchecked low-level call return value check",
+  "head": "curry202504:feat/unchecked-call",
+  "base": "main",
+  "body": "## Solutions\n\n### New Files\n- `src/checks/UncheckedCallCheck.sol` - unchecked call detection check\n- `src/checks/ERC20ApprovalRaceCheck.sol` - ERC20 approve race condition check\n- `src/examples/VulnerableUncheckedCall.sol` - vulnerable + fixed example contracts\n- `test/UncheckedCallTest.t.sol` - Foundry tests proving the vulnerability\n\nCloses #37\nCloses #36"
+}

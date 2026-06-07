@@ -1,0 +1,14 @@
+﻿{
+  "name": "bounty-hunter-cli",
+  "version": "1.0.0",
+  "description": "CLI tool to find GitHub bounties and code tasks",
+  "main": "index.js",
+  "bin": {
+    "bounty": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["bounty", "github", "freelance", "money"],
+  "license": "MIT"
+}

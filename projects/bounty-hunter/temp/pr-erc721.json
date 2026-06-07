@@ -1,0 +1,6 @@
+{
+  "title": "L1: Add GitHub Actions CI for forge build + forge test",
+  "head": "curry202504:feat/ci-workflow",
+  "base": "main",
+  "body": "## 解决方案: GitHub Actions CI Workflow\n\n添加了完整的CI流水线，包含:\n\n### CI 功能\n- ✅ Foundry安装 + forge build\n- ✅ forge test (含详细输出 -vvv)\n- ✅ 在 push 和 PR 时触发\n- ✅ TypeScript SDK 测试 (`cd sdk/typescript && npm ci && npm test`)\n- ✅ TypeScript 类型检查 + lint\n- ✅ README badge 可添加\n\n### 文件\n- `.github/workflows/ci.yml`\n\nCloses #31"
+}

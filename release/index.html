@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🦞 龙虾产品线 — 开发者赚钱工具集</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        background: #0f0f1a;
+        color: #e2e8f0;
+        min-height: 100vh;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+    
+    h1 { font-size: 36px; margin-bottom: 8px; }
+    h1 span { color: #00d4aa; }
+    .subtitle { color: #94a3b8; font-size: 16px; margin-bottom: 40px; }
+    
+    .product-grid { display: grid; gap: 20px; }
+    
+    .product-card {
+        background: #1a1a2e;
+        border: 1px solid #2a2a4a;
+        border-radius: 14px;
+        padding: 24px;
+        transition: 0.2s;
+    }
+    .product-card:hover { border-color: #00d4aa; transform: translateY(-2px); }
+    
+    .product-header {
+        display: flex; justify-content: space-between; align-items: flex-start;
+        margin-bottom: 12px;
+    }
+    .product-name { font-size: 20px; font-weight: 700; }
+    .product-status {
+        font-size: 12px; padding: 3px 10px; border-radius: 12px;
+    }
+    .status-ready { background: #1a3a2e; color: #00d4aa; }
+    .status-needs-action { background: #3a2e1a; color: #f59e0b; }
+    
+    .product-desc { color: #94a3b8; font-size: 14px; line-height: 1.6; margin-bottom: 12px; }
+    .product-meta { 
+        display: flex; gap: 16px; flex-wrap: wrap;
+        font-size: 13px; color: #94a3b8;
+    }
+    .product-meta span { display: flex; align-items: center; gap: 4px; }
+    .product-actions { margin-top: 14px; display: flex; gap: 8px; }
+    
+    .btn {
+        display: inline-block; padding: 8px 18px; border-radius: 8px;
+        font-size: 13px; font-weight: 600; text-decoration: none;
+        transition: 0.2s;
+    }
+    .btn-primary { background: #00d4aa; color: #000; }
+    .btn-primary:hover { opacity: 0.85; }
+    .btn-outline {
+        background: transparent; border: 1px solid #2a2a4a; color: #e2e8f0;
+    }
+    .btn-outline:hover { border-color: #00d4aa; color: #00d4aa; }
+    
+    .summary-card {
+        background: linear-gradient(135deg, #7c3aed, #3b82f6);
+        border-radius: 14px; padding: 28px; margin-bottom: 30px;
+    }
+    .summary-card h2 { font-size: 22px; margin-bottom: 8px; color: #fff; }
+    .summary-card p { color: rgba(255,255,255,0.85); font-size: 14px; line-height: 1.7; }
+    
+    .file-list { 
+        background: #16213e; border-radius: 8px; padding: 12px 16px;
+        font-family: monospace; font-size: 13px; line-height: 1.8;
+        color: #94a3b8;
+    }
+    .file-list .dir { color: #61afef; }
+    .file-list .file { color: #98c379; }
+    
+    hr { border: none; border-top: 1px solid #2a2a4a; margin: 24px 0; }
+    
+    .release-section { margin-top: 30px; }
+    .release-section h3 { font-size: 16px; margin-bottom: 12px; color: #00d4aa; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>🦞 <span>龙虾产品线</span></h1>
+    <p class="subtitle">开发者赚钱工具集 · 三路并进</p>
+    
+    <div class="summary-card">
+        <h2>📊 当前进度</h2>
+        <p>
+            ✅ VSCode扩展已本地安装 · ✅ GitHub Action已编译打包 · ✅ CLI工具已测试<br>
+            ✅ 仪表盘已上线 · ✅ 空投追踪已就绪 · ✅ 定时任务已配置<br>
+            ⏳ 待发布到 Marketplace / npm / Gumroad（需要一个账号）
+        </p>
+    </div>
+    
+    <div class="product-grid">
+        <!-- Product 1: VSCode Extension -->
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-name">🖼️ Quick Screenshot</div>
+                <span class="product-status status-ready">✅ 已就绪</span>
+            </div>
+            <div class="product-desc">
+                VS Code 扩展 — 选代码按 <code>Alt+Shift+S</code>，一键生成漂亮截图。<br>
+                6种主题 · 窗口框架 · 自动复制 · 保存PNG
+            </div>
+            <div class="product-meta">
+                <span>📦 ext-quick-screenshot/</span>
+                <span>🔧 TypeScript</span>
+                <span>📏 1MB .vsix</span>
+                <span>💵 $500-3000/月</span>
+            </div>
+            <div class="product-actions">
+                <a href="#" class="btn btn-primary" onclick="alert('扩展已本地安装！')">已安装到VS Code</a>
+                <a href="#" class="btn btn-outline" onclick="alert('发布到Marketplace需要GitHub账号登录')">发布到Marketplace</a>
+            </div>
+        </div>
+        
+        <!-- Product 2: GitHub Action -->
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-name">🏷️ PR Size Labeler</div>
+                <span class="product-status status-ready">✅ 已就绪</span>
+            </div>
+            <div class="product-desc">
+                GitHub Action — 根据PR行数自动打标签 (XS/S/M/L/XL)。<br>
+                开箱即用，单文件打包，发布到Marketplace即可。
+            </div>
+            <div class="product-meta">
+                <span>📦 gha-pr-size-labeler/</span>
+                <span>🔧 JavaScript</span>
+                <span>📏 1MB ncc打包</span>
+                <span>💵 引流工具</span>
+            </div>
+            <div class="product-actions">
+                <a href="#" class="btn btn-outline" onclick="alert('push到GitHub后即可发布到Marketplace')">发布到GitHub</a>
+            </div>
+        </div>
+        
+        <!-- Product 3: CLI git-summary -->
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-name">🌳 git-summary</div>
+                <span class="product-status status-ready">✅ 已就绪</span>
+            </div>
+            <div class="product-desc">
+                CLI工具 — Git仓库活动统计。按作者/按天统计提交、行数变更。<br>
+                支持表格 · 柱状图 · JSON输出
+            </div>
+            <div class="product-meta">
+                <span>📦 cli-git-summary/</span>
+                <span>🔧 Node.js</span>
+                <span>📏 9.6KB</span>
+                <span>💵 $100-500/月</span>
+            </div>
+            <div class="product-actions">
+                <a href="#" class="btn btn-outline" onclick="alert('npm publish 需要npm账号登录')">发布到npm</a>
+                <a href="#" class="btn btn-outline" onclick="alert('Gumroad.com 注册后可以上架')">上架Gumroad</a>
+            </div>
+        </div>
+        
+        <!-- Product 4: json2ts -->
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-name">📐 json2ts</div>
+                <span class="product-status status-ready">✅ 已创建</span>
+            </div>
+            <div class="product-desc">
+                CLI工具 — JSON转TypeScript类型定义。<br>
+                <code>json2ts data.json --name User > types.ts</code>
+            </div>
+            <div class="product-meta">
+                <span>📦 cli-json2ts/</span>
+                <span>🔧 Node.js</span>
+                <span>📏 5KB</span>
+            </div>
+        </div>
+        
+        <!-- Product 5: 仪表盘 -->
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-name">📊 龙虾三路仪表盘</div>
+                <span class="product-status status-ready">✅ 已就绪</span>
+            </div>
+            <div class="product-desc">
+                三路合一可视化管理面板：空投追踪 + Bounty扫描 + 代码维护。<br>
+                双击 <code>dashboard/index.html</code> 即可打开。
+            </div>
+            <div class="product-meta">
+                <span>📦 dashboard/</span>
+                <span>🔧 HTML/JS/Chart.js</span>
+                <span>📏 26KB</span>
+            </div>
+            <div class="product-actions">
+                <a href="#" class="btn btn-primary" onclick="alert('定位到: dashboard/index.html')">打开仪表盘</a>
+            </div>
+        </div>
+        
+        <!-- Product 6: 监控系统 -->
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-name">🤖 自动监控系统</div>
+                <span class="product-status status-ready">✅ 已运行</span>
+            </div>
+            <div class="product-desc">
+                Windows Task Scheduler 定时扫描，每日09:00自动更新空投/Bounty/代码维护数据。<br>
+                数据自动写入 <code>dashboard/*.json</code>，仪表盘实时反映。
+            </div>
+            <div class="product-meta">
+                <span>📦 money/</span>
+                <span>⏱ 每日09:00</span>
+                <span>📦 6个脚本</span>
+            </div>
+            <div class="product-actions">
+                <a class="btn btn-primary" onclick="alert('已安装: LobsterDailyScan / LobsterDailyScan-User')">任务已安装 ✅</a>
+            </div>
+        </div>
+        
+        <!-- Product 7: 空投手册 -->
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-name">🎁 空投实操手册</div>
+                <span class="product-status status-ready">✅ 已写完</span>
+            </div>
+            <div class="product-desc">
+                6个零成本空投项目分步教程，每一步都写好了。<br>
+                从注册到交互的完整路径，新手也能直接跟着做。
+            </div>
+            <div class="product-meta">
+                <span>📦 money/airdrop-guide.md</span>
+                <span>🎯 Myriad / Abstract L2 / PrismaX / Perena / ETHGas / Backpack</span>
+            </div>
+        </div>
+    </div>
+    
+    <hr>
+    
+    <div class="release-section">
+        <h3>📦 完整发布包位置</h3>
+        <div class="file-list">
+<div class="dir">release/</div>
+│  <span class="file">README.md</span> — 完整产品说明 + 商业计划<br>
+│<br>
+├── <span class="dir">vscode-extension/</span><br>
+│   ├── <span class="file">quick-screenshot-1.0.0.vsix</span> (1MB)<br>
+│   └── <span class="file">README.md</span><br>
+│<br>
+├── <span class="dir">github-action/</span><br>
+│   ├── <span class="file">action.yml</span><br>
+│   ├── <span class="file">index.js</span><br>
+│   ├── <span class="file">dist/index.js</span> (1MB, ncc打包)<br>
+│   └── <span class="file">README.md</span><br>
+│<br>
+├── <span class="dir">cli-tool/</span><br>
+│   ├── <span class="file">index.js</span><br>
+│   ├── <span class="file">package.json</span><br>
+│   └── <span class="file">README.md</span><br>
+│<br>
+├── <span class="dir">dashboard/</span><br>
+│   ├── <span class="file">index.html</span><br>
+│   ├── <span class="file">airdrop_data.json</span><br>
+│   ├── <span class="file">bounty_data.json</span><br>
+│   └── <span class="file">maintenance_data.json</span><br>
+│<br>
+└── <span class="dir">money/</span><br>
+    ├── <span class="file">airdrop-guide.md</span><br>
+    ├── <span class="file">run-all.ps1</span><br>
+    └── <span class="file">progress.md</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

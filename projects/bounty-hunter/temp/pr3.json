@@ -1,0 +1,6 @@
+{
+  "title": "[BOUNTY $100] HOOK: Pre-tool-use hook that blocks destructive bash commands",
+  "head": "curry202504:feat/safeguard-hook",
+  "base": "main",
+  "body": "## 解决方案: SafeGuard Pre-Tool-Use Hook\n\n### 文件\n- `hooks/pre-tool-use` - 核心hook脚本，拦截危险命令\n- `hooks/README.md` - 安装和使用说明\n\n### 功能\n- ✅ 遵循Claude Code hooks格式 (`~/.claude/hooks/`)\n- ✅ 拦截: `rm -rf`, `DROP TABLE`, `git push --force`, `TRUNCATE`, `DELETE FROM` 无WHERE等\n- ✅ 日志记录到 `~/.claude/hooks/blocked.log` (时间戳+命令+项目路径)\n- ✅ 显示清晰阻止原因和替代方案建议\n- ✅ 含安全替换建议 (trash, --force-with-lease 等)\n\n### 测试\n- 逐一验证所有危险模式的匹配\n- 安全命令正常放行\n- 日志写入验证\n\nCloses #3"
+}

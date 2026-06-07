@@ -1,0 +1,6 @@
+{
+  "title": "[BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history",
+  "head": "curry202504:feat/changelog-generator",
+  "base": "main",
+  "body": "## 解决方案: CHANGELOG 自动生成器\n\n### 文件\n- `changelog.sh` - 核心脚本，从git历史生成CHANGELOG.md\n- `SKILL.md` - 安装和使用说明\n\n### 功能\n- ✅ 通过 `./changelog.sh` 命令运行\n- ✅ 自动获取最近tag之后的commit\n- ✅ 自动分类为: Added / Fixed / Changed / Removed\n- ✅ 输出格式规范的 CHANGELOG.md\n- ✅ 支持 --since / --output 参数\n- ✅ 含README安装说明\n\n### 测试\n已在 Claude Builders Bounty 仓库测试通过。\nChangelog 输出格式见 SKILL.md 中的示例。\n\nCloses #1"
+}

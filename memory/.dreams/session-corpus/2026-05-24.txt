@@ -1,0 +1,14 @@
+[main/sessions/main/d0fb7ea9-4bfe-4615-96e7-98317715db7a.jsonl#L5] User: 去部署一下deepseek tui
+[main/sessions/main/d0fb7ea9-4bfe-4615-96e7-98317715db7a.jsonl#L16] Assistant: 查到信息了。`deepseek-tui` 是 DeepSeek 官方推出的终端编码助手，v0.8.42，支持 V4 Pro/Flash。 安装方式很多： 1. **npm** — `npm install -g deepseek-tui`（需要 Node 18+，已有） 2. **Cargo** — `cargo install deepseek-tui-cli --locked`（需要 Rust 1.88+） 3. **Docker** — 构建镜像跑容器 需要确认一下，你要部署到： - **本机（Windows）** —
+[main/sessions/main/d0fb7ea9-4bfe-4615-96e7-98317715db7a.jsonl#L17] User: 我记得这是github的项目吧 很多star的
+[main/sessions/main/d0fb7ea9-4bfe-4615-96e7-98317715db7a.jsonl#L18] Assistant: 是的，GitHub 上 adrianlerer/deepseek-tui（实际上现在是 Hmbown 维护），**34.1k stars**，很火的项目。 那装哪里？**本机 Windows** 还是 **VPS** 上？
+[main/sessions/main/d0fb7ea9-4bfe-4615-96e7-98317715db7a.jsonl#L24] Assistant: Node 22.22 没问题，没有 Rust。走 npm 安装。
+[main/sessions/main/d0fb7ea9-4bfe-4615-96e7-98317715db7a.jsonl#L35] Assistant: 包名改成了 `codewhale`，换这个装。
+[main/sessions/main/d0fb7ea9-4bfe-4615-96e7-98317715db7a.jsonl#L42] Assistant: 装好了 ✅ **codewhale (原 deepseek-tui) v0.8.42** - 项目已更名为 **CodeWhale**，GitHub: [Hmbown/CodeWhale](https://github.com/Hmbown/CodeWhale) - 实际上是同一个东西，34k+ stars 两个命令已就绪： ``` codewhale — CLI 模式（plan / agent / yolo） codewhale-tui — TUI 交互模式 ``` **需要你提供 DeepSeek API Key** 才
+[main/sessions/main/d0fb7ea9-4bfe-4615-96e7-98317715db7a.jsonl#L43] User: ？你确定是改名了 介绍下项目
+[main/sessions/main/d0fb7ea9-4bfe-4615-96e7-98317715db7a.jsonl#L44] Assistant: 你说得对，我自查一下，先别急着下结论。
+[main/sessions/main/d0fb7ea9-4bfe-4615-96e7-98317715db7a.jsonl#L47] Assistant: 这确实有疑点，让我直接查 GitHub 确认。
+[main/sessions/main/d0fb7ea9-4bfe-4615-96e7-98317715db7a.jsonl#L52] Assistant: 确认了，确实是同一个项目改名了，我把来龙去脉理清楚： --- **项目名变更史：** > **adrianlerer/deepseek-tui** (34.1k ⭐，原项目) > ↓ > **Hmbown/CodeWhale** (新仓库，同一个维护者 Hmbown) - 项目本身没变，只是 **改了个名字** - Rust 二进制命令从 `deepseek` 改成 `codewhale` - npm 包从 `deepseek-tui`（已废弃）改为 `codewhale`（新版） - 装的仍然是同一个东西，只是 rebra
+[main/sessions/main/d0fb7ea9-4bfe-4615-96e7-98317715db7a.jsonl#L54] Assistant: 已就绪 ✅ **本机 Windows 安装完成** 二进制已到位： - `codewhale` — CLI 入口 - `codewhale-tui` — TUI 交互界面 下一步需要 **DeepSeek API Key** 才能用。你有吗？有的话我帮你配： ``` codewhale auth set --provider deepseek --api-key *** ``` 没有的话可以去 [platform.deepseek.com](https://platform.deepseek.com) 申请一个。
+[main/sessions/main/da7fabc7-ac08-420e-a2ca-d9bb1466d0e2.jsonl.deleted.2026-05-23T19-34-12.347Z#L5] User: Write a dream diary entry from these memory fragments: - 报告规格（最终版）: 7,037+ 字; 12张图片（5产品图 + 7深圳本地客户画像）; 5章完整内容：市场与竞争 / 客户与需求 / 产品与模式 / 渠道与生态 / 结论; PDF: ~1.2MB - 报告规格（最终版）: 位于工作区：高空清洗机器人市场快速调研报告.docx - 技术记录: 保活脚本运行中：keep-awake.ps1（防止电脑待机）; 
+[main/sessions/main/da7fabc7-ac08-420e-a2ca-d9bb1466d0e2.jsonl.deleted.2026-05-23T19-34-12.347Z#L6] Assistant: A report on window-cleaning robots, seven thousand words tall, twelve pictures propped against its spine like windows into other lives. The keep-awake script hums its quiet lie to the machine — stay, stay, don't drift off — while WeC

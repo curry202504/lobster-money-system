@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Proxy Config - Vultr VPS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  max-width: 640px; margin: 0 auto; padding: 30px 20px 60px;
+  background: #f8f9fa; color: #1a1a2e;
+}
+.card {
+  background: #fff; border-radius: 16px; padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 20px;
+}
+h2 { font-size: 22px; margin-bottom: 8px; }
+h3 { font-size: 16px; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+h3 span { font-size: 20px; }
+.link-box {
+  background: #f0f4ff; border: 1px solid #d0d9ff; border-radius: 10px;
+  padding: 14px; font-size: 13px; word-break: break-all; color: #333;
+  user-select: all; margin: 8px 0 4px; line-height: 1.5;
+}
+.copy-btn {
+  display: inline-block; background: #4a6cf7; color: #fff; border: none;
+  border-radius: 8px; padding: 8px 18px; font-size: 14px; cursor: pointer;
+  margin-top: 10px; transition: background 0.2s;
+}
+.copy-btn:hover { background: #3b5de7; }
+.copy-btn:active { background: #2f4fd6; }
+.copy-btn.copied { background: #10b981; }
+.qr-row {
+  display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;
+  margin: 16px 0 8px;
+}
+.qr-item {
+  text-align: center; padding: 16px; border: 1px solid #e5e7eb;
+  border-radius: 12px; background: #fff;
+}
+.qr-item canvas { border-radius: 8px; }
+.qr-item p { margin-top: 8px; font-size: 13px; color: #666; }
+ul { list-style: none; padding: 0; }
+ul li {
+  padding: 10px 14px; border: 1px solid #e5e7eb; border-radius: 10px;
+  margin-bottom: 8px; display: flex; align-items: center; gap: 10px;
+}
+ul li strong { min-width: 70px; }
+.tag { font-size: 12px; color: #888; }
+.info-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.info-table td {
+  padding: 10px 14px; border-bottom: 1px solid #f0f0f0;
+}
+.info-table td:first-child { font-weight: 600; color: #555; width: 90px; }
+.info-table tr:last-child td { border-bottom: none; }
+.note {
+  margin-top: 16px; padding: 12px 16px; background: #fff8e1;
+  border-radius: 10px; font-size: 13px; color: #8d6e00; line-height: 1.5;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h2>Proxy Configuration</h2>
+  <p class="tag">VPS Vultr ・ Los Angeles ・ VLESS + TLS</p>
+</div>
+
+<div class="card">
+  <h3><span>🔗</span> Share Link</h3>
+  <p style="font-size:13px;color:#666;margin-bottom:8px;">复制链接，在客户端中导入</p>
+  <div class="link-box" id="shareLink">vless://550e8400-e29b-41d4-a716-446655440000@144.202.123.50:443?security=tls&type=tcp&flow=xtls-rprx-vision&encryption=none#Vultr-TLS</div>
+  <button class="copy-btn" onclick="copyLink()">📋 复制链接</button>
+</div>
+
+<div class="card">
+  <h3><span>📱</span> 扫码导入</h3>
+  <div class="qr-row">
+    <div class="qr-item">
+      <div id="qrcode-link"></div>
+      <p>分享链接</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3><span>📋</span> 参数一览</h3>
+  <table class="info-table">
+    <tr><td>协议</td><td>VLESS</td></tr>
+    <tr><td>地址</td><td>144.202.123.50</td></tr>
+    <tr><td>端口</td><td>443</td></tr>
+    <tr><td>UUID</td><td>550e8400-e29b-41d4-a716-446655440000</td></tr>
+    <tr><td>Flow</td><td>xtls-rprx-vision</td></tr>
+    <tr><td>传输</td><td>TCP</td></tr>
+    <tr><td>安全</td><td>TLS</td></tr>
+    <tr><td>加密</td><td>none</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h3><span>📲</span> 客户端推荐</h3>
+  <ul>
+    <li><strong>Android</strong> v2rayNG / NekoBox / Hiddify / V2Fly</li>
+    <li><strong>iOS</strong> Shadowrocket / V2Box / Stash / FoXray</li>
+  </ul>
+</div>
+
+<div class="note">
+  ⚠️ 证书为自签名证书，客户端需开启「允许不安全连接」或跳过证书验证（Shadowrocket 在节点详情中开启 Allow Insecure / TLS 开关）
+</div>
+
+<script>
+function copyLink() {
+  const link = document.getElementById('shareLink').textContent;
+  navigator.clipboard.writeText(link).then(() => {
+    const btn = document.querySelector('.copy-btn');
+    btn.textContent = '✅ 已复制';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = '📋 复制链接';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+
+window.onload = function() {
+  const link = document.getElementById('shareLink').textContent;
+  new QRCode(document.getElementById('qrcode-link'), {
+    text: link,
+    width: 220,
+    height: 220,
+    colorDark: '#1a1a2e',
+    colorLight: '#ffffff',
+    correctLevel: QRCode.CorrectLevel.M
+  });
+};
+</script>
+
+</body>
+</html>

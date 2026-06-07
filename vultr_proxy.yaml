@@ -1,0 +1,87 @@
+# Clash Verge 配置文件 - 洛杉矶代理 (VLESS+Reality)
+# 导入方法：Clash Verge → 订阅 → 导入 → 输入下方URL
+# 或者：打开 Clash Verge → 配置 → 新建 → 粘贴此内容
+
+mixed-port: 7890
+allow-lan: false
+mode: Rule
+log-level: info
+ipv6: false
+
+proxies:
+  - name: "Vultr洛杉矶"
+    type: vless
+    server: 144.202.123.50
+    port: 443
+    uuid: 16426a18-47a4-4295-8b24-11cb0c02535c
+    flow: xtls-rprx-vision
+    tls: true
+    servername: www.microsoft.com
+    skip-cert-verify: true
+    udp: true
+    network: tcp
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "fdjLLt5GXamVlmvot-JvXmH4jxG6Xw-bH1vfw9RHgGw"
+      short-id: "8767c99b647dea87"
+
+proxy-groups:
+  - name: "代理通道"
+    type: select
+    proxies:
+      - "Vultr洛杉矶"
+      - "DIRECT"
+
+rules:
+  # 中国网站直连
+  - DOMAIN-SUFFIX,cn,Vultr洛杉矶,force-remote-dns
+  - DOMAIN-SUFFIX,baidu.com,DIRECT
+  - DOMAIN-SUFFIX,bdstatic.com,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  - DOMAIN-SUFFIX,jd.com,DIRECT
+  - DOMAIN-SUFFIX,weibo.com,DIRECT
+  - DOMAIN-SUFFIX,163.com,DIRECT
+  - DOMAIN-SUFFIX,126.net,DIRECT
+  - DOMAIN-SUFFIX,sohu.com,DIRECT
+  - DOMAIN-SUFFIX,sina.com.cn,DIRECT
+  - DOMAIN-SUFFIX,alipay.com,DIRECT
+  - DOMAIN-SUFFIX,alibaba.com,DIRECT
+  - DOMAIN-SUFFIX,aliyun.com,DIRECT
+
+  # 境外常用网站走代理
+  - DOMAIN-SUFFIX,google.com,Vultr洛杉矶
+  - DOMAIN-SUFFIX,youtube.com,Vultr洛杉矶
+  - DOMAIN-SUFFIX,twitter.com,Vultr洛杉矶
+  - DOMAIN-SUFFIX,x.com,Vultr洛杉矶
+  - DOMAIN-SUFFIX,facebook.com,Vultr洛杉矶
+  - DOMAIN-SUFFIX,instagram.com,Vultr洛杉矶
+  - DOMAIN-SUFFIX,whatsapp.com,Vultr洛杉矶
+  - DOMAIN-SUFFIX,telegram.org,Vultr洛杉矶
+  - DOMAIN-SUFFIX,github.com,Vultr洛杉矶
+  - DOMAIN-SUFFIX,reddit.com,Vultr洛杉矶
+  - DOMAIN-SUFFIX,stackoverflow.com,Vultr洛杉矶
+  - DOMAIN-SUFFIX,discord.com,Vultr洛杉矶
+  - DOMAIN-SUFFIX,netflix.com,Vultr洛杉矶
+  - DOMAIN-SUFFIX,spotify.com,Vultr洛杉矶
+  - DOMAIN-SUFFIX,openai.com,Vultr洛杉矶
+  - DOMAIN-SUFFIX,claude.ai,Vultr洛杉矶
+
+  # 其余全部走代理
+  - MATCH,Vultr洛杉矶
+
+dns:
+  enabled: true
+  listen: 0.0.0.0:53
+  default-nameserver:
+    - 114.114.114.114
+    - 223.5.5.5
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - https://dns.google/dns-query
+    - https://1.1.1.1/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
